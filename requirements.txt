@@ -1,0 +1,13 @@
+streamlit
+pandas
+numpy
+scikit-learn
+matplotlib
+plotly
+scipy
+graphviz
+openpyxl
+liac-arff
+joblib
+reportlab
+xlrd

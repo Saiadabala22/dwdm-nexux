@@ -1,0 +1,1562 @@
+/* =========================================================
+   DATASET ANALYZER
+   PREMIUM WELCOME INTERFACE
+   ========================================================= */
+
+
+/* =========================================================
+   GLOBAL BACKGROUND
+   ========================================================= */
+
+[data-testid="stAppViewContainer"] {
+
+    background:
+
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(0, 145, 255, 0.13),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(0, 210, 255, 0.10),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(45, 90, 255, 0.12),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #020914 0%,
+            #061526 48%,
+            #020b16 100%
+        );
+
+    background-attachment: fixed;
+
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+[data-testid="stAppViewContainer"] .main {
+
+    background:
+        transparent;
+
+}
+
+
+/* =========================================================
+   SOFT FLOATING LIGHT
+   ========================================================= */
+
+[data-testid="stAppViewContainer"]::before {
+
+    content: "";
+
+    position: fixed;
+
+    width: 500px;
+
+    height: 500px;
+
+    top: 5%;
+
+    left: 15%;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(
+                0,
+                150,
+                255,
+                0.10
+            ),
+            transparent 68%
+        );
+
+    filter:
+        blur(25px);
+
+    pointer-events:
+        none;
+
+    animation:
+        floatingLight 14s ease-in-out infinite alternate;
+
+    z-index:
+        0;
+
+}
+
+
+[data-testid="stAppViewContainer"]::after {
+
+    content: "";
+
+    position: fixed;
+
+    width: 400px;
+
+    height: 400px;
+
+    right: 5%;
+
+    bottom: 5%;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(
+                0,
+                210,
+                255,
+                0.08
+            ),
+            transparent 70%
+        );
+
+    filter:
+        blur(25px);
+
+    pointer-events:
+        none;
+
+    animation:
+        floatingLight2 17s ease-in-out infinite alternate;
+
+    z-index:
+        0;
+
+}
+
+
+@keyframes floatingLight {
+
+    0% {
+
+        transform:
+            translate(
+                -30px,
+                -10px
+            );
+
+    }
+
+    100% {
+
+        transform:
+            translate(
+                80px,
+                45px
+            );
+
+    }
+
+}
+
+
+@keyframes floatingLight2 {
+
+    0% {
+
+        transform:
+            translate(
+                20px,
+                15px
+            );
+
+    }
+
+    100% {
+
+        transform:
+            translate(
+                -70px,
+                -40px
+            );
+
+    }
+
+}
+
+
+/* =========================================================
+   HERO WRAPPER
+   ========================================================= */
+
+.hero-wrapper {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    padding:
+        35px 0 15px 0;
+
+}
+
+
+/* =========================================================
+   WELCOME CARD
+   ========================================================= */
+
+.welcome-card {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    padding:
+        65px 65px 55px 65px;
+
+    border-radius:
+        30px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(
+                8,
+                42,
+                75,
+                0.97
+            ),
+            rgba(
+                20,
+                104,
+                164,
+                0.94
+            )
+        );
+
+    border:
+        1px solid
+        rgba(
+            100,
+            205,
+            255,
+            0.18
+        );
+
+    box-shadow:
+
+        0 25px 70px
+        rgba(
+            0,
+            0,
+            0,
+            0.35
+        ),
+
+        inset 0 1px 0
+        rgba(
+            255,
+            255,
+            255,
+            0.08
+        );
+
+    animation:
+        heroAppear 0.9s ease-out both;
+
+}
+
+
+/* =========================================================
+   HERO LIGHT SWEEP
+   ========================================================= */
+
+.welcome-card::before {
+
+    content: "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        -50%;
+
+    width:
+        45%;
+
+    height:
+        100%;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(
+                255,
+                255,
+                255,
+                0.035
+            ),
+            transparent
+        );
+
+    transform:
+        skewX(-15deg);
+
+    animation:
+        heroSweep 9s ease-in-out infinite;
+
+}
+
+
+@keyframes heroSweep {
+
+    0% {
+
+        left:
+            -60%;
+
+    }
+
+    45% {
+
+        left:
+            120%;
+
+    }
+
+    100% {
+
+        left:
+            120%;
+
+    }
+
+}
+
+
+/* =========================================================
+   HERO BADGE
+   ========================================================= */
+
+.hero-badge {
+
+    display:
+        inline-block;
+
+    padding:
+        7px 14px;
+
+    border-radius:
+        30px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.08
+        );
+
+    border:
+        1px solid
+        rgba(
+            150,
+            220,
+            255,
+            0.16
+        );
+
+    color:
+        #bdeaff;
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        1.5px;
+
+    margin-bottom:
+        22px;
+
+}
+
+
+/* =========================================================
+   HERO TITLE
+   ========================================================= */
+
+.welcome-title {
+
+    color:
+        #f7fbff !important;
+
+    font-size:
+        48px;
+
+    font-weight:
+        750;
+
+    letter-spacing:
+        -1px;
+
+    margin:
+        0 0 20px 0;
+
+    text-shadow:
+
+        0 3px 12px
+        rgba(
+            0,
+            0,
+            0,
+            0.25
+        );
+
+    animation:
+        titleAppear 1s ease-out both;
+
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+   ========================================================= */
+
+.welcome-description {
+
+    color:
+        #deeffb !important;
+
+    font-size:
+        18px;
+
+    line-height:
+        1.8;
+
+    max-width:
+        1050px;
+
+    margin:
+        0;
+
+    animation:
+        descriptionAppear 1.2s ease-out both;
+
+}
+
+
+/* =========================================================
+   HERO LINE
+   ========================================================= */
+
+.hero-line {
+
+    width:
+        100%;
+
+    height:
+        1px;
+
+    margin:
+        30px 0 15px 0;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(
+                255,
+                255,
+                255,
+                0.20
+            ),
+            rgba(
+                255,
+                255,
+                255,
+                0.03
+            ),
+            transparent
+        );
+
+}
+
+
+/* =========================================================
+   HERO MINI TEXT
+   ========================================================= */
+
+.hero-mini-text {
+
+    color:
+        #a9d5ef;
+
+    font-size:
+        13px;
+
+    letter-spacing:
+        1px;
+
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.features-heading {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    text-align:
+        center;
+
+    padding:
+        35px 0 25px 0;
+
+}
+
+
+.section-kicker {
+
+    color:
+        #36bdf5;
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        2px;
+
+    margin-bottom:
+        8px;
+
+}
+
+
+.features-heading h2 {
+
+    color:
+        #f2f8fc !important;
+
+    font-size:
+        30px;
+
+    margin:
+        0 0 8px 0;
+
+}
+
+
+.features-heading p {
+
+    color:
+        #9eb7c9;
+
+    margin:
+        0;
+
+    font-size:
+        15px;
+
+}
+
+
+/* =========================================================
+   FEATURE CARD
+   ========================================================= */
+
+.feature-card {
+
+    position:
+        relative;
+
+    min-height:
+        245px;
+
+    padding:
+        30px;
+
+    border-radius:
+        24px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(
+                12,
+                35,
+                58,
+                0.95
+            ),
+            rgba(
+                4,
+                18,
+                32,
+                0.94
+            )
+        );
+
+    border:
+        1px solid
+        rgba(
+            110,
+            200,
+            245,
+            0.13
+        );
+
+    box-shadow:
+
+        0 18px 45px
+        rgba(
+            0,
+            0,
+            0,
+            0.22
+        );
+
+    overflow:
+        hidden;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+
+    animation:
+        cardAppear 0.8s ease-out both;
+
+}
+
+
+/* =========================================================
+   CARD TOP LINE
+   ========================================================= */
+
+.feature-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    width:
+        100%;
+
+    height:
+        2px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            #16b9f5,
+            transparent
+        );
+
+    opacity:
+        0.65;
+
+}
+
+
+/* =========================================================
+   CARD HOVER
+   ========================================================= */
+
+.feature-card:hover {
+
+    transform:
+        translateY(-9px);
+
+    border-color:
+        rgba(
+            45,
+            190,
+            255,
+            0.40
+        );
+
+    box-shadow:
+
+        0 25px 55px
+        rgba(
+            0,
+            140,
+            240,
+            0.14
+        );
+
+}
+
+
+/* =========================================================
+   FEATURE ICON
+   ========================================================= */
+
+.feature-icon {
+
+    width:
+        58px;
+
+    height:
+        58px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        17px;
+
+    font-size:
+        27px;
+
+    margin-bottom:
+        18px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.07
+        );
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.10
+        );
+
+}
+
+
+/* =========================================================
+   FEATURE NUMBER
+   ========================================================= */
+
+.feature-number {
+
+    position:
+        absolute;
+
+    top:
+        25px;
+
+    right:
+        25px;
+
+    color:
+        rgba(
+            150,
+            220,
+            255,
+            0.35
+        );
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1px;
+
+}
+
+
+/* =========================================================
+   FEATURE TITLE
+   ========================================================= */
+
+.feature-card h3 {
+
+    color:
+        #f4faff !important;
+
+    font-size:
+        21px;
+
+    margin:
+        0 0 10px 0;
+
+}
+
+
+/* =========================================================
+   FEATURE DESCRIPTION
+   ========================================================= */
+
+.feature-card p {
+
+    color:
+        #abc4d6 !important;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.65;
+
+    margin:
+        0 0 20px 0;
+
+}
+
+
+/* =========================================================
+   FEATURE TAGS
+   ========================================================= */
+
+.feature-tags {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        6px;
+
+}
+
+
+.feature-tags span {
+
+    padding:
+        5px 9px;
+
+    border-radius:
+        20px;
+
+    background:
+        rgba(
+            20,
+            150,
+            220,
+            0.08
+        );
+
+    border:
+        1px solid
+        rgba(
+            70,
+            180,
+            230,
+            0.12
+        );
+
+    color:
+        #8ddcff;
+
+    font-size:
+        11px;
+
+    font-weight:
+        600;
+
+}
+
+
+/* =========================================================
+   WORKFLOW
+   ========================================================= */
+
+.workflow {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        12px;
+
+    margin:
+        38px 0 25px 0;
+
+}
+
+
+.workflow-item {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    color:
+        #7996a9;
+
+    font-size:
+        13px;
+
+}
+
+
+.workflow-item span {
+
+    width:
+        27px;
+
+    height:
+        27px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.06
+        );
+
+    border:
+        1px solid
+        rgba(
+            120,
+            190,
+            230,
+            0.14
+        );
+
+    font-size:
+        11px;
+
+}
+
+
+.workflow-item.active {
+
+    color:
+        #dff5ff;
+
+}
+
+
+.workflow-item.active span {
+
+    background:
+        #0c9de8;
+
+    color:
+        white;
+
+    border-color:
+        #22baf5;
+
+}
+
+
+.workflow-line {
+
+    width:
+        60px;
+
+    height:
+        1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(
+                70,
+                180,
+                240,
+                0.05
+            ),
+            rgba(
+                70,
+                180,
+                240,
+                0.35
+            ),
+            rgba(
+                70,
+                180,
+                240,
+                0.05
+            )
+        );
+
+}
+
+
+/* =========================================================
+   CONTINUE SECTION
+   ========================================================= */
+
+.continue-heading {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    text-align:
+        center;
+
+    margin:
+        10px 0 15px 0;
+
+    color:
+        #e8f7ff;
+
+    font-size:
+        18px;
+
+    font-weight:
+        650;
+
+}
+
+
+.continue-heading span {
+
+    display:
+        block;
+
+    margin-top:
+        5px;
+
+    color:
+        #8ca9ba;
+
+    font-size:
+        13px;
+
+    font-weight:
+        400;
+
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.stButton {
+
+    position:
+        relative;
+
+    z-index:
+        5;
+
+}
+
+
+.stButton > button {
+
+    min-height:
+        54px;
+
+    border:
+        1px solid
+        rgba(
+            120,
+            225,
+            255,
+            0.22
+        ) !important;
+
+    border-radius:
+        16px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #087ff5,
+            #08b8ed
+        ) !important;
+
+    color:
+        white !important;
+
+    font-size:
+        16px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.2px;
+
+    box-shadow:
+
+        0 10px 30px
+        rgba(
+            0,
+            150,
+            240,
+            0.20
+        );
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        filter 0.25s ease;
+
+}
+
+
+.stButton > button:hover {
+
+    transform:
+        translateY(-3px);
+
+    filter:
+        brightness(1.08);
+
+    box-shadow:
+
+        0 15px 38px
+        rgba(
+            0,
+            170,
+            255,
+            0.30
+        );
+
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+[data-testid="stSidebar"] {
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #030914,
+            #061321
+        );
+
+    border-right:
+        1px solid
+        rgba(
+            80,
+            170,
+            230,
+            0.10
+        );
+
+}
+
+
+.sidebar-brand {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    padding:
+        8px 0 12px 0;
+
+}
+
+
+.sidebar-logo {
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #087ff5,
+            #08b8ed
+        );
+
+    font-size:
+        22px;
+
+    box-shadow:
+        0 7px 20px
+        rgba(
+            0,
+            150,
+            240,
+            0.18
+        );
+
+}
+
+
+.sidebar-title {
+
+    color:
+        #f0f8ff;
+
+    font-size:
+        17px;
+
+    font-weight:
+        700;
+
+}
+
+
+.sidebar-subtitle {
+
+    color:
+        #7f9caf;
+
+    font-size:
+        10px;
+
+    margin-top:
+        2px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.premium-footer {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    margin:
+        45px 0 20px 0;
+
+    padding:
+        18px 5px;
+
+    border-top:
+        1px solid
+        rgba(
+            120,
+            190,
+            230,
+            0.10
+        );
+
+    color:
+        #718b9c;
+
+    font-size:
+        11px;
+
+}
+
+
+/* =========================================================
+   PAGE ANIMATION
+   ========================================================= */
+
+section.main {
+
+    animation:
+        pageAppear 0.7s ease-out both;
+
+}
+
+
+@keyframes pageAppear {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(8px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+@keyframes heroAppear {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(25px)
+            scale(0.985);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+@keyframes titleAppear {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(12px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+@keyframes descriptionAppear {
+
+    from {
+
+        opacity:
+            0;
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+    }
+
+}
+
+
+@keyframes cardAppear {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(18px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   REMOVE STRONG TEXT GLOW
+   ========================================================= */
+
+[data-testid="stMarkdownContainer"] h1,
+[data-testid="stMarkdownContainer"] h2,
+[data-testid="stMarkdownContainer"] h3 {
+
+    text-shadow:
+        0 2px 8px
+        rgba(
+            0,
+            0,
+            0,
+            0.20
+        ) !important;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .welcome-card {
+
+        padding:
+            45px 30px;
+
+    }
+
+    .welcome-title {
+
+        font-size:
+            38px;
+
+    }
+
+    .welcome-description {
+
+        font-size:
+            16px;
+
+    }
+
+    .feature-card {
+
+        min-height:
+            210px;
+
+    }
+
+    .workflow {
+
+        gap:
+            5px;
+
+    }
+
+    .workflow-line {
+
+        width:
+            25px;
+
+    }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+    }
+
+}
